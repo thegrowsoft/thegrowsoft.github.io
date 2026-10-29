@@ -1,1 +1,866 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Superpower Engineering Team | The GrowSoft</title>
+    <meta name="description"
+          content="A dedicated 4-member software engineering team covering frontend, backend, mobile, AI, cloud and DevOps.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#557DBF',
+                            600: '#466caf',
+                            700: '#375a99',
+                            900: '#172554'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-12px)' }
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #050914;
+        }
+
+        .glass {
+            background: rgba(255,255,255,.045);
+            border: 1px solid rgba(255,255,255,.09);
+            backdrop-filter: blur(16px);
+        }
+
+        .grid-bg {
+            background-image:
+                linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #fff, #8db5ff, #dd4637);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .glow {
+            box-shadow:
+                0 0 60px rgba(85,125,191,.18),
+                0 0 120px rgba(221,70,55,.08);
+        }
+    </style>
+</head>
+
+<body class="text-white antialiased">
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 pt-5">
+        <nav class="glass rounded-2xl px-5 py-4 flex items-center justify-between">
+
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-red-500 flex items-center justify-center font-black">
+                    GS
+                </div>
+
+                <div>
+                    <div class="font-bold tracking-wide">The GrowSoft</div>
+                    <div class="text-[10px] text-gray-400 uppercase tracking-[3px]">
+                        Engineering Team
+                    </div>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm text-gray-300">
+                <a href="#team" class="hover:text-white transition">Team</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#stack" class="hover:text-white transition">Tech Stack</a>
+                <a href="#process" class="hover:text-white transition">Process</a>
+            </div>
+
+            <a href="#contact"
+               class="hidden sm:inline-flex bg-white text-black px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-200 transition">
+                Start a Project
+            </a>
+
+            <button id="menuBtn"
+                    class="md:hidden text-gray-300 text-2xl">
+                ☰
+            </button>
+        </nav>
+
+        <div id="mobileMenu"
+             class="hidden glass mt-2 rounded-2xl p-5 md:hidden">
+            <div class="flex flex-col gap-4 text-gray-300">
+                <a href="#team">Team</a>
+                <a href="#services">Services</a>
+                <a href="#stack">Tech Stack</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Start a Project</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="relative min-h-screen overflow-hidden grid-bg flex items-center">
+
+    <div class="absolute inset-0">
+        <div class="absolute w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full top-20 left-10"></div>
+        <div class="absolute w-96 h-96 bg-red-600/10 blur-[120px] rounded-full bottom-10 right-10"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-5 pt-32 pb-20">
+
+        <div class="max-w-4xl">
+
+            <div class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 text-sm text-gray-300 mb-8">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                Available for International Projects
+            </div>
+
+            <h1 class="text-5xl sm:text-6xl lg:text-8xl font-black leading-[.95] tracking-tight">
+                4 Engineers.
+                <br>
+                <span class="gradient-text">Every Stack.</span>
+                <br>
+                One Superpowered Team.
+            </h1>
+
+            <p class="mt-8 text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed">
+                A dedicated engineering team that works as an extension of your company —
+                from product strategy and UI to backend, AI, cloud, deployment and ongoing support.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+
+                <a href="#contact"
+                   class="inline-flex justify-center items-center px-7 py-4 rounded-xl bg-brand-500 hover:bg-brand-600 font-bold transition">
+                    Build With Our Team
+                    <span class="ml-2">→</span>
+                </a>
+
+                <a href="#stack"
+                   class="inline-flex justify-center items-center px-7 py-4 rounded-xl glass hover:bg-white/10 font-semibold transition">
+                    Explore Our Superpowers
+                </a>
+
+            </div>
+
+            <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
+
+                <div class="glass rounded-2xl p-5">
+                    <div class="text-2xl font-black">4</div>
+                    <div class="text-sm text-gray-500 mt-1">Engineers</div>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <div class="text-2xl font-black">15+</div>
+                    <div class="text-sm text-gray-500 mt-1">Technologies</div>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <div class="text-2xl font-black">360°</div>
+                    <div class="text-sm text-gray-500 mt-1">Development</div>
+                </div>
+
+                <div class="glass rounded-2xl p-5">
+                    <div class="text-2xl font-black">24/7</div>
+                    <div class="text-sm text-gray-500 mt-1">Collaboration</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= TEAM ================= -->
+
+<section id="team" class="py-28 bg-[#070b16]">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="max-w-2xl mb-14">
+            <div class="text-brand-500 font-bold uppercase tracking-[4px] text-sm">
+                The Team
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-black mt-4">
+                One team.
+                <span class="text-gray-500">Four superpowers.</span>
+            </h2>
+
+            <p class="text-gray-400 mt-6 text-lg">
+                Every project gets access to a complete engineering unit,
+                not just a single developer.
+            </p>
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            <!-- Member 1 -->
+
+            <div class="glass rounded-3xl p-7 hover:-translate-y-2 transition duration-300">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center text-3xl">
+                    🧠
+                </div>
+
+                <div class="mt-7 text-xs uppercase tracking-[3px] text-brand-500">
+                    01 / Lead
+                </div>
+
+                <h3 class="text-2xl font-bold mt-2">
+                    Lead Software Engineer
+                </h3>
+
+                <p class="text-gray-400 mt-4 text-sm leading-6">
+                    Architecture, backend engineering, database design,
+                    technical decisions and code quality.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="tech">Laravel</span>
+                    <span class="tech">Node.js</span>
+                    <span class="tech">PHP</span>
+                    <span class="tech">Python</span>
+                </div>
+
+            </div>
+
+
+            <!-- Member 2 -->
+
+            <div class="glass rounded-3xl p-7 hover:-translate-y-2 transition duration-300">
+
+                <div class="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-400/20 flex items-center justify-center text-3xl">
+                    ⚡
+                </div>
+
+                <div class="mt-7 text-xs uppercase tracking-[3px] text-purple-400">
+                    02 / Frontend
+                </div>
+
+                <h3 class="text-2xl font-bold mt-2">
+                    Frontend Engineer
+                </h3>
+
+                <p class="text-gray-400 mt-4 text-sm leading-6">
+                    Modern interfaces, dashboards, responsive applications
+                    and high-performance frontend experiences.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="tech">React.js</span>
+                    <span class="tech">Next.js</span>
+                    <span class="tech">TypeScript</span>
+                    <span class="tech">Tailwind</span>
+                </div>
+
+            </div>
+
+
+            <!-- Member 3 -->
+
+            <div class="glass rounded-3xl p-7 hover:-translate-y-2 transition duration-300">
+
+                <div class="w-16 h-16 rounded-2xl bg-green-500/10 border border-green-400/20 flex items-center justify-center text-3xl">
+                    🔥
+                </div>
+
+                <div class="mt-7 text-xs uppercase tracking-[3px] text-green-400">
+                    03 / Full Stack
+                </div>
+
+                <h3 class="text-2xl font-bold mt-2">
+                    Full-Stack Engineer
+                </h3>
+
+                <p class="text-gray-400 mt-4 text-sm leading-6">
+                    Connects frontend, backend, APIs, integrations,
+                    business logic and third-party services.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="tech">React</span>
+                    <span class="tech">Laravel</span>
+                    <span class="tech">Node</span>
+                    <span class="tech">APIs</span>
+                </div>
+
+            </div>
+
+
+            <!-- Member 4 -->
+
+            <div class="glass rounded-3xl p-7 hover:-translate-y-2 transition duration-300">
+
+                <div class="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-400/20 flex items-center justify-center text-3xl">
+                    🛡️
+                </div>
+
+                <div class="mt-7 text-xs uppercase tracking-[3px] text-red-400">
+                    04 / QA & DevOps
+                </div>
+
+                <h3 class="text-2xl font-bold mt-2">
+                    QA & DevOps Engineer
+                </h3>
+
+                <p class="text-gray-400 mt-4 text-sm leading-6">
+                    Testing, deployment, infrastructure, performance,
+                    monitoring and production reliability.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="tech">AWS</span>
+                    <span class="tech">Docker</span>
+                    <span class="tech">Linux</span>
+                    <span class="tech">CI/CD</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+            <div class="text-brand-500 font-bold uppercase tracking-[4px] text-sm">
+                What We Build
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-black mt-4">
+                From idea to production.
+            </h2>
+
+            <p class="text-gray-400 mt-6 text-lg">
+                We can take ownership of an entire product or join your
+                existing engineering team.
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-16">
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">💻</div>
+                <h3 class="text-xl font-bold mt-6">Web Applications</h3>
+                <p class="text-gray-400 mt-3">
+                    Scalable SaaS platforms, dashboards, portals,
+                    marketplaces and custom web applications.
+                </p>
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">⚛️</div>
+                <h3 class="text-xl font-bold mt-6">React.js Development</h3>
+                <p class="text-gray-400 mt-3">
+                    Modern React applications with TypeScript,
+                    Next.js, Tailwind and API-driven architecture.
+                </p>
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">🤖</div>
+                <h3 class="text-xl font-bold mt-6">AI & Automation</h3>
+                <p class="text-gray-400 mt-3">
+                    AI integrations, intelligent workflows, LLM applications,
+                    RAG systems and AI-powered automation.
+                </p>
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">📱</div>
+                <h3 class="text-xl font-bold mt-6">Mobile Applications</h3>
+                <p class="text-gray-400 mt-3">
+                    Cross-platform mobile products using Flutter
+                    and React Native.
+                </p>
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">☁️</div>
+                <h3 class="text-xl font-bold mt-6">Cloud & DevOps</h3>
+                <p class="text-gray-400 mt-3">
+                    AWS infrastructure, Docker, Linux, CI/CD,
+                    deployment and production monitoring.
+                </p>
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+                <div class="text-4xl">🔌</div>
+                <h3 class="text-xl font-bold mt-6">API & Integrations</h3>
+                <p class="text-gray-400 mt-3">
+                    REST APIs, GraphQL, payment gateways,
+                    third-party APIs and enterprise integrations.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= STACK ================= -->
+
+<section id="stack" class="py-28 bg-[#070b16]">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+
+            <div>
+                <div class="text-brand-500 font-bold uppercase tracking-[4px] text-sm">
+                    Our Superpowers
+                </div>
+
+                <h2 class="text-4xl md:text-6xl font-black mt-4">
+                    The stack is never the limit.
+                </h2>
+            </div>
+
+            <p class="text-gray-400 max-w-xl">
+                We choose the right technology for the problem —
+                not force every project into the same stack.
+            </p>
+
+        </div>
+
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Frontend</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">React.js</span>
+                    <span class="stack">Next.js</span>
+                    <span class="stack">Vue.js</span>
+                    <span class="stack">Nuxt.js</span>
+                    <span class="stack">Angular</span>
+                    <span class="stack">TypeScript</span>
+                    <span class="stack">Tailwind</span>
+                    <span class="stack">JavaScript</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Backend</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">Laravel</span>
+                    <span class="stack">PHP</span>
+                    <span class="stack">Node.js</span>
+                    <span class="stack">Express</span>
+                    <span class="stack">NestJS</span>
+                    <span class="stack">Python</span>
+                    <span class="stack">Django</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Mobile</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">Flutter</span>
+                    <span class="stack">React Native</span>
+                    <span class="stack">Dart</span>
+                    <span class="stack">Mobile APIs</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Database</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">MySQL</span>
+                    <span class="stack">PostgreSQL</span>
+                    <span class="stack">MongoDB</span>
+                    <span class="stack">Redis</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">AI & Automation</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">OpenAI</span>
+                    <span class="stack">LLM</span>
+                    <span class="stack">RAG</span>
+                    <span class="stack">AI Agents</span>
+                    <span class="stack">Automation</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Cloud & DevOps</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">AWS</span>
+                    <span class="stack">Docker</span>
+                    <span class="stack">Linux</span>
+                    <span class="stack">CI/CD</span>
+                    <span class="stack">GitHub Actions</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">E-commerce</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">Shopify</span>
+                    <span class="stack">WooCommerce</span>
+                    <span class="stack">Custom Commerce</span>
+                    <span class="stack">Stripe</span>
+                    <span class="stack">PayPal</span>
+                </div>
+            </div>
+
+
+            <div class="glass rounded-3xl p-7">
+                <h3 class="font-bold text-lg">Engineering</h3>
+
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="stack">REST API</span>
+                    <span class="stack">GraphQL</span>
+                    <span class="stack">Git</span>
+                    <span class="stack">Testing</span>
+                    <span class="stack">Security</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section id="process" class="py-28">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="max-w-3xl">
+
+            <div class="text-brand-500 font-bold uppercase tracking-[4px] text-sm">
+                How We Work
+            </div>
+
+            <h2 class="text-4xl md:text-6xl font-black mt-4">
+                Simple for you.
+                <span class="text-gray-500">Powerful behind the scenes.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-4 gap-5 mt-16">
+
+            <div>
+                <div class="text-6xl font-black text-white/10">01</div>
+                <h3 class="text-xl font-bold mt-3">Discover</h3>
+                <p class="text-gray-400 mt-3 text-sm leading-6">
+                    Understand your business, product, users and technical requirements.
+                </p>
+            </div>
+
+            <div>
+                <div class="text-6xl font-black text-white/10">02</div>
+                <h3 class="text-xl font-bold mt-3">Plan</h3>
+                <p class="text-gray-400 mt-3 text-sm leading-6">
+                    Architecture, technology selection, milestones and development roadmap.
+                </p>
+            </div>
+
+            <div>
+                <div class="text-6xl font-black text-white/10">03</div>
+                <h3 class="text-xl font-bold mt-3">Build</h3>
+                <p class="text-gray-400 mt-3 text-sm leading-6">
+                    Four engineers work together across frontend, backend, QA and infrastructure.
+                </p>
+            </div>
+
+            <div>
+                <div class="text-6xl font-black text-white/10">04</div>
+                <h3 class="text-xl font-bold mt-3">Launch</h3>
+                <p class="text-gray-400 mt-3 text-sm leading-6">
+                    Testing, deployment, monitoring and continuous product improvements.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="py-28 bg-[#070b16]">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+
+                <div class="text-brand-500 font-bold uppercase tracking-[4px] text-sm">
+                    Why A Team?
+                </div>
+
+                <h2 class="text-4xl md:text-6xl font-black mt-4 leading-tight">
+                    Don't hire one developer.
+                    <span class="text-gray-500">
+                        Get an entire engineering unit.
+                    </span>
+                </h2>
+
+                <p class="text-gray-400 mt-7 text-lg leading-8">
+                    Your product doesn't only need someone who writes code.
+                    It needs architecture, frontend, backend, testing,
+                    deployment and continuous problem solving.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex mt-8 px-6 py-4 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition">
+                    Talk To Our Team →
+                </a>
+
+            </div>
+
+
+            <div class="space-y-4">
+
+                <div class="glass rounded-2xl p-6 flex gap-5">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">Complete Development Coverage</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Frontend, backend, mobile, AI, QA and DevOps.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 flex gap-5">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">Single Communication Point</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            One coordinated team instead of managing multiple freelancers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 flex gap-5">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">Built For Long-Term Products</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Clean architecture, documentation and maintainable code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass rounded-2xl p-6 flex gap-5">
+                    <div class="text-2xl">✓</div>
+                    <div>
+                        <h3 class="font-bold">International Collaboration</h3>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Remote-first workflow designed for international clients.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section id="contact" class="py-28">
+
+    <div class="max-w-5xl mx-auto px-5">
+
+        <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-600/30 to-red-600/20 border border-white/10 p-8 sm:p-14 text-center glow">
+
+            <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+            <div class="relative">
+
+                <div class="inline-flex px-4 py-2 rounded-full bg-white/10 text-sm text-gray-300">
+                    Ready to build?
+                </div>
+
+                <h2 class="text-4xl sm:text-6xl font-black mt-6">
+                    Bring us your idea.
+                    <br>
+                    <span class="gradient-text">We'll bring the team.</span>
+                </h2>
+
+                <p class="text-gray-400 max-w-2xl mx-auto mt-6 text-lg">
+                    Tell us what you're building, what problem you're solving,
+                    and where you want to go. Our four-member engineering team
+                    can help turn it into a production-ready product.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+
+                    <a href="mailto:hello@thegrowsoft.com"
+                       class="px-7 py-4 rounded-xl bg-white text-black font-bold hover:bg-gray-200 transition">
+                        hello@thegrowsoft.com
+                    </a>
+
+                    <a href="https://thegrowsoft.com/"
+                       target="_blank"
+                       class="px-7 py-4 rounded-xl glass font-bold hover:bg-white/10 transition">
+                        Visit The GrowSoft →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="border-t border-white/10 py-10">
+
+    <div class="max-w-7xl mx-auto px-5">
+
+        <div class="flex flex-col md:flex-row justify-between gap-6">
+
+            <div>
+                <div class="font-bold text-lg">
+                    The GrowSoft
+                </div>
+
+                <p class="text-gray-500 text-sm mt-2">
+                    Four engineers. One powerful development team.
+                </p>
+            </div>
+
+            <div class="text-gray-500 text-sm">
+                © 2026 The GrowSoft. All rights reserved.
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= STYLES ================= -->
+
+<style>
+
+    .tech {
+        font-size: 11px;
+        padding: 5px 9px;
+        border-radius: 7px;
+        background: rgba(255,255,255,.06);
+        color: #9ca3af;
+        border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .stack {
+        font-size: 12px;
+        padding: 7px 10px;
+        border-radius: 8px;
+        background: rgba(255,255,255,.045);
+        color: #b8becb;
+        border: 1px solid rgba(255,255,255,.07);
+        transition: .2s;
+    }
+
+    .stack:hover {
+        background: rgba(85,125,191,.15);
+        color: white;
+        border-color: rgba(85,125,191,.3);
+    }
+
+</style>
+
+
+<!-- ================= JS ================= -->
+
+<script>
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+</script>
+
+</body>
+</html>
